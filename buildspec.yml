@@ -1,0 +1,18 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      - echo "Installing dependencies..."
+  pre_build:
+    commands:
+      - echo "Preparing for build..."
+  build:
+    commands:
+      - echo "Building the project..."
+      - echo "Hello, CodeBuild!" > output.txt
+  post_build:
+    commands:
+      - echo "Build completed successfully."
+artifacts:
+  files:
+    - output.txt
